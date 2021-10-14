@@ -132,6 +132,7 @@ https://www.w3schools.com/html/html_links.asp
 
 - 다른 페이지로 링크 연결
 - 같은 페이지에서 상하 이동 - 북마크 기능
+  - href에 #만 사용하게 되면 페이지의 처음으로 이동
 
 ### HTML Lists
 
@@ -232,5 +233,62 @@ https://codesandbox.io/
 
 <img src="images/img.png" />
 ```
+
+### HTML video
+
+https://www.w3schools.com/html/html5_video.asp
+
+- video : 저장된 영상 파일을 해당 웹 페이지에 삽입
+
+```
+<video>
+  <source src="영상 경로/이름" type="video/mp4" />
+</video>
+```
+
+- attribute
+  - html5에서 추가된 속성
+  - name = "value" 형식에서 name만 쓰는 형식으로 변경
+  - controls : 동영상 컨트롤 버튼 표시
+  - loop : 반복 재생
+  - autoplay : 자동재생
+  - muted : 음소거
+
+### HTML Semantic Elements
+
+https://www.w3schools.com/html/html5_semantic_elements.asp
+
+- 영역을 구분하는 태그(요소)를 의미있게 구분하고 영역을 설정하도록 하는 요소
+
+> header : 웹페이지 상단 영역 - 로고, 로그인, 메뉴
+>
+> nav : (nav)igation : 웹사이트 메뉴
+>
+> section : 콘텐츠를 담는 영역
+>
+> article : 짧은 글 / 한 내용으로 완성되는 글
+>
+> aside : 부수적인 내용, 광고
+>
+> footer : 하단 영역 - 서브 로고, 주소, 연락처, 소유권
+
+### HTML Block & Inline
+
+https://www.w3schools.com/html/html_blocks.asp
+
+- HTML Element는 기본적으로 각각의 영역을 가짐
+
+- HTML Elements의 특성(디자인 개념)
+
+  - Block 요소
+
+    - 항상 새 줄에서 표시됨(줄 바뀌어서 표시)
+    - Block 요소로 만들어지는 영역의 가로길이가 전체 너비에 채워짐
+    - div : (div)ision - container 요소
+
+  - Inline 요소
+    - 한 줄에 나란히 표시됨(줄 바뀌지 않음)
+    - Inline 요소로 만들어지는 영역의 가로길이가 콘텐츠 크기만큼 차지함.
+    - span : container 요소
 
 # CSS
