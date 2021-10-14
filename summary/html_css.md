@@ -133,6 +133,104 @@ https://www.w3schools.com/html/html_links.asp
 - 다른 페이지로 링크 연결
 - 같은 페이지에서 상하 이동 - 북마크 기능
 
+### HTML Lists
+
+https://www.w3schools.com/html/html_lists.asp
+
+- ul : (u)nordered (l)ist - 순서없는 목록
+- ol : (o)rdered (l)ist - 순서있는 목록
+- li : (l)ist (i)tem - 항목
+
+- dl : (d)escription (l)ist - 설명 목록
+- dt : (d)escription (t)itle(theme) - 설명 목록 제목
+- dd : (d)escription (d)ata - 설명 목록 내용
+
+### HTML Table
+
+https://www.w3schools.com/html/html_tables.asp
+
+표 구성 요소 : 열(세로줄), 행(가로줄), 셀(칸)
+
+- table
+- thead : 표 구성 영역 - 열제목 영역
+- tbody : 표 구성 영역 - 데이터 영역
+- tr : (t)able (r)ow - 표의 행
+- th : (t)able (h)eader - 열 제목 셀
+- td : (t)able (d)ata - 데이터 셀
+
+https://www.tablesgenerator.com/html_tables
+
 ## HTML MULTIMEDIA Contens
+
+### HTML Images
+
+https://www.w3schools.com/html/html_images.asp
+
+- img : image - 이미지 파일을 HTML 페이지에 삽입 / 빈 요소
+- attribute
+  - src : 이미지 파일의 경로/이름 정보
+  - alt : (alt)ernative - 대체 텍스트
+
+```
+<img src="이미지파일 경로/이름" alt="이미지 설명글" />
+```
+
+### HTML File Paths
+
+https://www.w3schools.com/html/html_filepaths.asp
+
+- 파일 경로 ≒ URL
+
+```
+URL
+www.w3schools.com/html/html_filepaths.asp
+www.w3schools.com/html/
+
+File 경로
+www.w3schools.com/html/html_filepaths.asp
+```
+
+- 인터넷 주소
+
+  - IP : Internet Protocol - 인터넷에서 사용하는 실제 주소 (192.168.0.1)
+  - Domain Name : IP주소를 대체하는 영어로 된 주소체계(www.naver.com)
+
+- URL(Uniform Resource Locator)
+  - 인터넷에서 사용하는 서버에 저장된 자원의 위치
+  - 자세한 인터넷 주소
+
+```
+URL
+https://codesandbox.io/s/html-css-hc9rd?file=/summary/html_css.md
+
+Domain Name
+https://codesandbox.io/
+```
+
+- 절대주소(URL)
+  - File 이나 Resource를 찾거나 이동하기 위한 기준 지점이 서버의 주소(IP, 도메인 주소)
+  - 항상 같은 위치를 찾거나 이동할 수 있음
+
+```
+<a href="https://github.com/edu-ministori/addinedu_10/blob/main/README.md"></a>
+
+<img src="https://codesandbox.io/s/html-css-hc9rd?file=/summary/images/img.png" />
+```
+
+- 상대주소(URL)
+  - File이나 Resource를 찾거나 이동하기 위한 기준 지점이 이동하거나 찾으려고하는 파일의 위치
+  - 상황에 따라서 경로/주소 표시 형태가 변경될 수 있음
+
+```
+<a href="README.md"></a>
+
+../ : 상위폴더
+
+<a href="../README.md"></a>
+
+<img src="summary/images/img.png" />
+
+<img src="images/img.png" />
+```
 
 # CSS
