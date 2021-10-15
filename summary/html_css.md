@@ -161,7 +161,7 @@ https://www.w3schools.com/html/html_tables.asp
 
 https://www.tablesgenerator.com/html_tables
 
-## HTML MULTIMEDIA Contens
+## HTML MULTIMEDIA Contens(Embed Contents)
 
 ### HTML Images
 
@@ -254,7 +254,7 @@ https://www.w3schools.com/html/html5_video.asp
   - autoplay : 자동재생
   - muted : 음소거
 
-### HTML Semantic Elements
+## HTML Semantic Elements
 
 https://www.w3schools.com/html/html5_semantic_elements.asp
 
@@ -272,7 +272,7 @@ https://www.w3schools.com/html/html5_semantic_elements.asp
 >
 > footer : 하단 영역 - 서브 로고, 주소, 연락처, 소유권
 
-### HTML Block & Inline
+## HTML Block & Inline
 
 https://www.w3schools.com/html/html_blocks.asp
 
@@ -291,4 +291,112 @@ https://www.w3schools.com/html/html_blocks.asp
     - Inline 요소로 만들어지는 영역의 가로길이가 콘텐츠 크기만큼 차지함.
     - span : container 요소
 
+## HTML ID, Class
+
+https://www.w3schools.com/html/html_id.asp
+https://www.w3schools.com/html/html_classes.asp
+
+- HTML Element에 이름을 지정해주는 attribute
+
+> ID
+>
+> - 하나의 HTML 문서내에서 고유해야 함 : 하나만 존재 (논리적 특징)
+> - 하나의 HTML Element에 여러개 ID 이름을 지정할 수 없음
+> - 대체적으로 데이터를 고유하게 표시할 때 사용
+
+```
+<h1 id="heading">제목</h1>
+<h1 id="heading">제목</h1> (X)
+
+<p id="paragraph">단락</p>
+<p id="sentence chapter">단락</p> (X)
+```
+
+> Class
+>
+> - 하나의 HTML 문서내에서 여러 Element에 사용할 수 있음
+> - 하나의 HTML Element에 여러가지 이름을 사용할 수 있음
+> - 스타일을 공통 적용, 효과를 여러 곳에 동일하게 적용할 때 사용
+
+```
+<h1 class="heading">제목</h1>
+<h2 class="heading">제목</h2> (O)
+
+<p class="paragraph">단락</p>
+<p class="sentence chapter">단락</p> (O)
+```
+
 # CSS
+
+## CSS Introduction
+
+- CSS : Cascading Style Sheets
+- HTML Element를 스타일링 언어
+
+> cascading : 연속적인
+>
+> 동일한 HTML Element에 대해서 여라가지 스타일링 적용
+>
+> - 가장 마지막에 적용된 스타일이 HTML Element에 적용되어 화면에 표시
+
+## CSS Syntax(문법, 구문)
+
+- selector(선택자)
+- declaration(선언)
+
+```
+선택자 {선언 - property(속성):value(값);}
+```
+
+## CSS Selector(선택자)
+
+https://www.w3schools.com/css/css_selectors.asp
+
+- 스타일링을 할 대상(HTML Element)을 선택
+
+> Simple Selector(단순 선택자)
+>
+> - name(tag), id, class 3가지를 사용해서 선택자를 표현
+>
+> Combinator Selector(복합 선택자)
+>
+> Pseudo-class(가상 클래스)
+>
+> Pseudo-element(가상 요소)
+
+### Element(Tag) Selector
+
+- 요소의 이름을 선택자로 사용
+- 해당 요소를 모두 선택해서 스타일링 적용
+
+```
+p {}
+div {}
+```
+
+### ID Selector
+
+```
+#heading {}
+```
+
+### Class Selector
+
+```
+.sentence {}
+```
+
+> 선택자 연결 표현
+>
+> - 여러 요소중에 특정 요소를 선택하기 위해서 사용
+
+```
+<p id="para" class="sentence">단락</p>
+
+
+p#para{}
+
+p.sentence{}
+
+#para.sentence{}
+```
