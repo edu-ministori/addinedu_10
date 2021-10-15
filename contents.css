@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "MaruBuri-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: #124040;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-family: "MaruBuri-Regular", serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+}
+
+ol {
+  font-family: "MaruBuri-Regular", serif;
+}
+
+ul {
+  font-family: "MaruBuri-Regular", serif;
+}
+
+dl {
+  font-family: "MaruBuri-Regular", serif;
+}
+
+table {
+  font-family: "MaruBuri-Regular", serif;
+}
+
+a {
+  color: #124040;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: line-through;
+  color: hotpink;
+}
+
+ol {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+}
