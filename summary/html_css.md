@@ -825,3 +825,5 @@ body{
   }
 }
 ```
+
+<img src="https://raw.githubusercontent.com/edu-ministori/addinedu_10/main/summary/images/html_css.png"></img>
