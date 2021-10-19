@@ -335,7 +335,7 @@ https://www.w3schools.com/html/html_classes.asp
 
 > cascading : 연속적인
 >
-> 동일한 HTML Element에 대해서 여라가지 스타일링 적용
+> 동일한 HTML Element에 대해서 여러가지 스타일링 적용
 >
 > - 가장 마지막에 적용된 스타일이 HTML Element에 적용되어 화면에 표시
 
@@ -598,3 +598,230 @@ p{
 
 - Table 테두리 속성은 틈이 벌어져 있는 테두리가 기본
 - border-collapse:collapse 설정 => 테두리 사이 틈을 제거
+
+## Box Styling
+
+- Box : 네모난 형태 영역, 콘텐츠 => HTML 모든 요소
+
+> Box Model(Box에 스타일링 속성의 모음)
+>
+> - 크기 : 가로길이(너비), 세로길이(높이)
+> - 여백 : 안쪽 여백, 바깥 여백
+> - 테두리
+> - 배경(추가 속성) : 콘텐츠 영역과 안쪽 여백 영역에만 적용
+
+> Box 전체 크기 계산(가로 또는 세로)
+>
+> - 가로 : width + padding + border
+> - 세로 : height + padding + border
+
+```
+Ex)
+
+div{
+  width:200px;
+  padding:30px;
+  border:1px solid red;
+  margin:20px;
+}
+
+=> 박스 전체 가로길이 : 200px + 30px * 2 + 1px * 2 = 262px
+
+=> 박스 전체 가로길이 200px : 200px - 30px * 2 - 1px * 2 = 138px(width)
+```
+
+> box-sizing:border-box;
+>
+> - width 속성 값이 전체 길이 되도록 특성 변경
+
+```
+div{
+  width:200px;
+  padding:30px;
+  border:1px solid red;
+  margin:20px;
+  box-sizing:border-box;
+}
+
+=> 박스 전체 가로길이 : 200px
+
+```
+
+### height / width
+
+> - auto : default - 값을 지정하지 않았을때 적용되는 값
+>
+>   - width : 너비가 부모요소를 기준으로 전체에 채워짐
+>   - height : 높이가 자식요소를 기준으로 지정됨
+>
+> - px : px 단위로 고정된 수치값 적용
+>
+> - % : % 단위로 유동적인 수치값 적용
+>   - 부모요소를 기준으로 부모요소의 크기가 변경되면 맞춰서 같이 변경됨 => 반응형 웹페이지에 사용
+>   - width : 부모 요소를 기준으로 일정 비율만큼 적용
+>   - height : 부모 요소를 기준으로 일정 비율만큼 적용, 부모요소가 auto일때는 적용되지 않음
+
+### padding
+
+> 개별 적용
+>
+> - padding-top : 위
+> - padding-right : 오른쪽
+> - padding-bottom : 아래
+> - padding-left : 왼쪽
+
+> 축약표현
+>
+> padding:값
+>
+> - 값 4개 : 4방향 각각 수치값 적용
+> - 값 3개 : top right-left bottom
+> - 값 2개 : top-bottom right-left
+> - 값 1개 : 4방향 전체 공통 적용
+
+### border
+
+- 테두리 스타일 : 굵기, 형태, 색
+- 테두리 방향
+
+```
+border:굵기 형태 색;
+
+border:1px solid red;
+
+border-top: 1px solid red;
+border-right: 1px solid red;
+border-bottom: 1px solid red;
+border-left: 1px solid red;
+```
+
+### margin
+
+- 바깥 여백
+- 사용 방법 : padding과 같음
+
+### background
+
+- 배경색, 배경이미지
+
+> 배경색 : background-color
+>
+> - (R)ed, (G)reen, (B)lue, (A)lpha
+> - 색 코드값
+>   - 색 이름 : red, blue
+>   - 16진수 : #FF[R] FF[G] FF[B]
+>   - 10진수 : rgb(200[R:0~255],125[G:0~255],38[B:0~255])
+>   - 10진수 + 투명 : rgba(200,125,38,0.5[A:0~1])
+
+> 배경이미지 : background-image
+>
+> - url() : 이미지 파일 경로/이름
+> - 특징 : 이미지 반복시켜서 영역을 채우는 기본 성질
+>
+> - 배경이미지 반복 : background-repeat
+>   - repeat(default), no-repeat, repeat-x, repeat-y
+> - 배경이미지 고정 : background-attachment
+>   - fixed : 고정
+> - 배경이미지 위치 : background-position
+>   - x, y 좌표값 표시
+
+### Box model 과 Block/Inline 관계
+
+- Block 요소는 박스 모델이 제대로 적용
+- Inline 요소는 박스 모델이 제대로 적용되지 않음
+  - width/height, margin이 적용되지 않음
+
+### display 속성
+
+> 한줄에 여러 박스를 표시하면서(inline), 박스모델도 적용(block)
+> inline-block 성질을 사용
+
+- 박스가 화면에 표시될 때 원래 성질을 변경
+- 값 : block, inline, inline-block
+
+## Multimedia Contents Styling
+
+> 콘텐츠(이미지, 비디오) 크기, 여백 스타일링 => Box Model
+
+## Layout Styling
+
+> 구분 영역(박스) 크기, 여백 스타일링 => Box Model
+>
+> 구분 영역(박스)의 배치
+
+### flex
+
+> display:flex;
+>
+> - flex 배치 적용
+>
+> flex-direction : 배치 방향
+>
+> - row(default), row-reverse, column, column-reverse
+>
+> flex-wrap : 줄바꿈
+>
+> - nowrap(default), wrap
+>
+> justify-content : 가로방향 정렬
+>
+> - flex-start, center, flex-end
+> - space-around, space-between
+>
+> align-items : 세로방향 정렬
+>
+> - flex-start, center, flex-end
+
+## 반응형 웹 디자인
+
+- PC 모니터, 태블릿 화면, 스마트 폰 화면등 여러 디바이스 화면에 콘텐츠를 잘 전달할 수 있도록 레이아웃을 적절하게 변경되도록 하는 웹 디자인 방식
+
+> 디바이스별 해상도 구분
+>
+> - 반응형 웹 : 대부분 가로길이 해상도로 구분
+> - 중단점(breakpoint) : 범위 설정
+>   - 디바이스별 구분 : PC, Tablet, Smart Phone
+>   - 중단점은 단일한 한 지점을 설정하는 것이 아니고 범위로 설정해야 함
+>   - pc : 1920px ~ 1024px
+>   - tablet : 1024px ~ 768px
+>   - smart phone : 640px ~ 320px
+>
+> HTML, CSS 사용하는 기술
+>
+> - viewport
+>
+>   - 여러 디바이스 화면에 최적화되게 보일 수 있도록 HTML 페이지에 설정하는 구문
+>
+> - media query
+>
+>   - 해상도를 구분해서 필요한 CSS를 적용할 수 있게 하는 키워드
+>   - 해상도 범위를 열린 범위로 구현하면 넓은 범위에서 적용한 css를 작은 범위에서 공통으로 사용할 수 있음
+
+```
+@media screen and (가로길이 해상도 범위 : max-width){
+  적용 css 코드
+}
+
+** max-width : 최대 가로길이 => **픽셀 이하 범위
+```
+
+```
+/* pc styling */
+body{
+  background:red;
+}
+
+/* tablet styling */
+@media screen and (max-width:1024px){
+  body{
+    background:blue;
+  }
+}
+
+/* smart phone styling */
+@media screen and (max-width:768px){
+  body{
+    background:green;
+  }
+}
+```

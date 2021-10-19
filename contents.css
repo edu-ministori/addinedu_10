@@ -55,3 +55,40 @@ ol {
 table {
   border-collapse: collapse;
 }
+
+h1 {
+  border-bottom: 1px solid grey;
+}
+
+p {
+  margin-bottom: 50px;
+}
+
+ol {
+  border: 1px solid grey;
+  width: 280px;
+  padding: 50px;
+  background-color: lightgrey;
+}
+
+th,
+td {
+  border-bottom: 1px solid grey;
+}
+
+table {
+  border-top: 1px solid grey;
+}
+
+img {
+  width: 500px;
+}
+
+video {
+  width: 500px;
+}
+
+iframe {
+  width: 500px;
+  height: 300px;
+}
