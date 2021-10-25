@@ -150,6 +150,7 @@ video {
   width: 100%;
   box-sizing: border-box;
   background-color: #fff;
+  z-index: 990;
 }
 
 .logo {
@@ -185,8 +186,43 @@ video {
 .section01 {
   text-align: center;
   padding: 100px 0;
+  height: 300px;
   background-color: #f2f2f2;
   margin-top: 99px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+.slide.in {
+  left: 0;
+  transition: left 1s;
+}
+
+.slide.out {
+  left: -100%;
+  transition: left 1s;
+}
+
+.slide.jump {
+  left: 100%;
+}
+
+.btn-wrap {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center; /* inline 요소에도 적용 */
 }
 
 .section-heading {
@@ -199,6 +235,10 @@ video {
   width: 500px;
   margin: 0 auto;
   color: #999999;
+}
+
+.tab {
+  display: none;
 }
 
 .group {
@@ -281,6 +321,7 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 50;
   }
 
   .gnb-list {
@@ -291,6 +332,7 @@ video {
   .gnb-list-item {
     text-align: center;
     margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .hamburger {
@@ -300,6 +342,7 @@ video {
     background-color: transparent;
     border: none;
     padding: 0;
+    z-index: 90; /* 박스 앞뒤 순서 지정 */
   }
 
   .hamburger > img {
@@ -316,8 +359,28 @@ video {
     padding: 0 20px;
   }
 
+  .tab {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .tab-item {
+    padding: 10px;
+    background-color: skyblue;
+    margin: 5px;
+  }
+
+  .tab-item.active {
+    background-color: pink;
+  }
+
   .group {
     width: 340px;
+    display: none;
+  }
+
+  .group.active {
+    display: block;
   }
 
   .footer {
