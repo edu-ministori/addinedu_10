@@ -61,5 +61,30 @@ buttonPlay.addEventListener("click", function () {
 });
 
 const tabItem = document.querySelectorAll(".tab-item");
+const group = document.querySelectorAll(".group");
+let indexNumber = 0;
 
-tabItem.addEventListener("click", function () {});
+for (let i = 0; i < 3; i++) {
+  tabItem[i].addEventListener("click", function (event) {
+    // 클릭한 요소외의 나머지 요소는 비활성화(=> 전체 요소를 비활성화 구현) => active class 삭제
+    for (let j = 0; j < 3; j++) {
+      tabItem[j].classList.remove("active");
+      group[j].classList.remove("active");
+    }
+
+    // 클릭한 요소의 인덱스 번호 => tab, group의 해당 인덱스번호 순서의 요소에 active class를 추가
+
+    // tab 활성화
+    this.classList.add("active");
+
+    // group 활성화
+    for (let k = 0; k < 3; k++) {
+      if (tabItem[k] === this) {
+        // this = event.currentTarget
+        indexNumber = k;
+      }
+    }
+
+    group[indexNumber].classList.add("active");
+  });
+}
